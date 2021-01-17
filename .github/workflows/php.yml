@@ -1,4 +1,4 @@
-name: PHP Composer
+name: common-workflow
 
 on: [push, pull_request]
 

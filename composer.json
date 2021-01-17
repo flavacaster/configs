@@ -1,0 +1,28 @@
+{
+  "name": "n7/configs",
+  "description": "Library for configurations files organization",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Gluhov",
+      "email": "nope7777@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.4|~8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "N7\\Configs\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
+}

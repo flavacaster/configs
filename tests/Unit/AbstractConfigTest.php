@@ -32,9 +32,9 @@ final class AbstractConfigTest extends TestCase
 
             public function __construct()
             {
-                $this->intValue = $this->env->getInt('ENV_INT');
-                $this->boolValue = $this->env->getBool('ENV_BOOL');
-                $this->stringValue = $this->env->getString('ENV_STR');
+                $this->intValue = $this->env()->getInt('ENV_INT');
+                $this->boolValue = $this->env()->getBool('ENV_BOOL');
+                $this->stringValue = $this->env()->getString('ENV_STR');
             }
 
             public function getIntValue(): ?int

@@ -67,8 +67,8 @@ class ApplicationConfiguration extends AbstractConfig
     
     public function __construct()
     {
-        $this->timezone = $this->env->getString('APPLICATION_TIMEZONE', 'UTC', false);
-        $this->currency = $this->env->getString('APPLICATION_CURRENCY', 'USD', false);
+        $this->timezone = $this->env()->getString('APPLICATION_TIMEZONE', 'UTC', false);
+        $this->currency = $this->env()->getString('APPLICATION_CURRENCY', 'USD', false);
     }
 }
 
@@ -83,7 +83,7 @@ class StorageConfiguration extends AbstractConfig
         LocalStorageConfiguration $localStorageConfiguration,
         AwsStorageConfiguration $awsStorageConfiguration
     ) {
-        $this->driver = $this->env->getString('STORAGE_DRIVER', 'local', false);
+        $this->driver = $this->env()->getString('STORAGE_DRIVER', 'local', false);
         
         $this->drivers['local'] = $localStorageConfiguration;
         $this->drivers['aws'] = $awsStorageConfiguration;

@@ -35,7 +35,7 @@ final class EnvironmentGetFloatTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertNull($this->environment->getFloat('ENV_KEY', 10.0, true));
+        $this->assertNull($this->environment->getNullableFloat('ENV_KEY', 10.0));
     }
 
     public function testItWillThrowExceptionInCaseIfInvalidValueDefined(): void

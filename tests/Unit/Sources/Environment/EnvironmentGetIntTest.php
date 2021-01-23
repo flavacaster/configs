@@ -35,7 +35,7 @@ final class EnvironmentGetIntTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertNull($this->environment->getInt('ENV_KEY', 10, true));
+        $this->assertNull($this->environment->getNullableInt('ENV_KEY', 10));
     }
 
     public function testItWillThrowExceptionInCaseIfInvalidValueDefined(): void

@@ -33,7 +33,7 @@ final class EnvironmentGetListTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertNull($this->environment->getList('ENV_KEY', [], true));
+        $this->assertNull($this->environment->getNullableList('ENV_KEY', []));
     }
 
     public function listValuesProvider(): array

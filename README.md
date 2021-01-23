@@ -137,23 +137,43 @@ class LocalStorageAdapter
 Available methods:
 
 ```php
-public function getBool(string $key, $default = null, bool $nullable = true): ?bool
+public function getBool(string $key, $default = null): bool
 ```
 
 ```php
-public function getFloat(string $key, $default = null, bool $nullable = true): ?float
+public function getNullableBool(string $key, $default = null): ?bool
 ```
 
 ```php
-public function getInt(string $key, $default = null, bool $nullable = true): ?int
+public function getFloat(string $key, $default = null): float
 ```
 
 ```php
-public function getList(string $key, $default = [], bool $nullable = false): ?array
+public function getNullableFloat(string $key, $default = null): ?float
 ```
 
 ```php
-public function getString(string $key, $default = null, bool $nullable = true): ?string
+public function getInt(string $key, $default = null): int
+```
+
+```php
+public function getNullableInt(string $key, $default = null): ?int
+```
+
+```php
+public function getList(string $key, $default = []): array
+```
+
+```php
+public function getNullableList(string $key, $default = []): ?array
+```
+
+```php
+public function getString(string $key, $default = null): string
+```
+
+```php
+public function getNullableString(string $key, $default = null): ?string
 ```
 
 ```php

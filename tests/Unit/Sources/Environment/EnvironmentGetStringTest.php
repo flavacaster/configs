@@ -13,7 +13,7 @@ final class EnvironmentGetStringTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertSame($value, $this->environment->getString('ENV_KEY', null, false));
+        $this->assertSame($value, $this->environment->getString('ENV_KEY', null));
     }
 
     /**
@@ -33,7 +33,7 @@ final class EnvironmentGetStringTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertNull($this->environment->getString('ENV_KEY', true, true));
+        $this->assertNull($this->environment->getNullableString('ENV_KEY', true));
     }
 
     public function stringValuesProvider(): array

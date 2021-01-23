@@ -35,7 +35,7 @@ final class EnvironmentGetBoolTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=' . $value);
 
-        $this->assertNull($this->environment->getBool('ENV_KEY', true, true));
+        $this->assertNull($this->environment->getNullableBool('ENV_KEY', true));
     }
 
     public function testItWillThrowExceptionInCaseIfInvalidValueDefined(): void

@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace N7\Configs;
 
-use N7\Configs\Sources\Environment;
+use N7\Configs\Sources\EnvironmentSource;
 
 abstract class AbstractConfig implements ConfigInterface
 {
-    private Environment $env;
+    private EnvironmentSource $env;
 
-    protected function env(): Environment
+    protected function env(): EnvironmentSource
     {
-        return $this->env = ($this->env ?? new Environment());
+        return $this->env = ($this->env ?? new EnvironmentSource());
     }
 }

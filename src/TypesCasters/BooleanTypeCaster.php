@@ -13,6 +13,8 @@ final class BooleanTypeCaster implements TypeCasterInterface
 
     public function cast($value): bool
     {
+        $value = strtolower($value);
+        
         if (in_array($value, self::TRUE_VALUES, true)) {
             return true;
         }

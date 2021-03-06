@@ -67,8 +67,7 @@ class ApplicationConfiguration extends AbstractConfig
     
     public function __construct()
     {
-        $this->timezone = $this->
-        getString('APPLICATION_TIMEZONE', 'UTC');
+        $this->timezone = $this->env()->getString('APPLICATION_TIMEZONE', 'UTC');
         $this->currency = $this->env()->getString('APPLICATION_CURRENCY', 'USD');
     }
 }

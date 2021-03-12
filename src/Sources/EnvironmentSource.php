@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace N7\Configs\Sources;
 
+use N7\Configs\Exceptions\InvalidParameterValueException;
+use N7\Configs\Exceptions\InvalidValueException;
 use N7\Configs\TypesCasters;
 use Closure;
 
@@ -82,7 +84,13 @@ final class EnvironmentSource
             return null;
         }
 
-        return $this->getCaster($caster)->cast($value);
+        try {
+            $result = $this->getCaster($caster)->cast($value);
+        } catch (InvalidValueException $exception) {
+            throw new InvalidParameterValueException($key, $exception);
+        }
+
+        return $result;
     }
 
     private function getCaster(string $caster): TypesCasters\TypeCasterInterface

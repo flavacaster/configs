@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Sources\Environment;
 
+use N7\Configs\Exceptions\InvalidParameterValueException;
 use N7\Configs\Exceptions\InvalidValueException;
 
 final class EnvironmentGetIntTest extends AbstractEnvironmentTestCase
@@ -42,7 +43,7 @@ final class EnvironmentGetIntTest extends AbstractEnvironmentTestCase
     {
         putenv('ENV_KEY=asd');
 
-        $this->expectException(InvalidValueException::class);
+        $this->expectException(InvalidParameterValueException::class);
 
         $this->environment->getInt('ENV_KEY');
     }

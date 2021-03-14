@@ -8,8 +8,8 @@ use N7\Configs\Exceptions\InvalidValueException;
 
 final class BooleanTypeCaster implements TypeCasterInterface
 {
-    private const TRUE_VALUES = ['true', '(true)'];
-    private const FALSE_VALUES = ['false', '(false)'];
+    private const TRUE_VALUES = ['true', '(true)', '1', 1];
+    private const FALSE_VALUES = ['false', '(false)', '0', 0];
 
     public function cast($value): bool
     {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace N7\Configs\Sources;
+namespace Flavacaster\Configs\Sources;
 
-use N7\Configs\Exceptions\InvalidParameterValueException;
-use N7\Configs\Exceptions\InvalidValueException;
-use N7\Configs\TypesCasters;
+use Flavacaster\Configs\Exceptions\InvalidParameterValueException;
+use Flavacaster\Configs\Exceptions\InvalidValueException;
+use Flavacaster\Configs\TypesCasters;
 use Closure;
 
 final class EnvironmentSource
@@ -76,6 +76,11 @@ final class EnvironmentSource
     private function getEnvironmentValue(string $caster, string $key, $default, bool $nullable)
     {
         $value = getenv($key);
+
+        if ($value === false) {
+            $value = array_key_exists($key, $_ENV) ? $_ENV[$key] : false;
+        }
+
         if ($value === false) {
             return $this->prepareDefaultValue($default);
         }

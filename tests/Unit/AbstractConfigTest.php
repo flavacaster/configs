@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use N7\Configs\AbstractConfig;
-use N7\Configs\ConfigInterface;
+use Flavacaster\Configs\AbstractConfig;
+use Flavacaster\Configs\ConfigInterface;
 use PHPUnit\Framework\TestCase;
 
 final class AbstractConfigTest extends TestCase

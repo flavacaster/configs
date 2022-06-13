@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace N7\Configs\TypesCasters;
+namespace Flavacaster\Configs\TypesCasters;
 
 final class StringTypeCaster implements TypeCasterInterface
 {

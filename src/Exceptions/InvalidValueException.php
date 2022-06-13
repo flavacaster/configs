@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace N7\Configs\Exceptions;
+namespace Flavacaster\Configs\Exceptions;
 
 final class InvalidValueException extends \RuntimeException
 {

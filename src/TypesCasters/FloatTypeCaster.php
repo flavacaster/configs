@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace N7\Configs\TypesCasters;
+namespace Flavacaster\Configs\TypesCasters;
 
-use N7\Configs\Exceptions\InvalidValueException;
+use Flavacaster\Configs\Exceptions\InvalidValueException;
 
 final class FloatTypeCaster implements TypeCasterInterface
 {

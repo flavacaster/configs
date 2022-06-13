@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Sources\Environment;
 
-use N7\Configs\Exceptions\InvalidParameterValueException;
-use N7\Configs\Exceptions\InvalidValueException;
+use Flavacaster\Configs\Exceptions\InvalidParameterValueException;
 
 final class EnvironmentGetBoolTest extends AbstractEnvironmentTestCase
 {

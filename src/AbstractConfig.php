@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace N7\Configs;
+namespace Flavacaster\Configs;
 
-use N7\Configs\Sources\EnvironmentSource;
+use Flavacaster\Configs\Sources\EnvironmentSource;
 
 abstract class AbstractConfig implements ConfigInterface
 {

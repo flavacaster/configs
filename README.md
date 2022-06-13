@@ -58,7 +58,7 @@ class LocalStorageAdapter
 Can be transformed in to:
 
 ```php
-use N7\Configs\AbstractConfig;
+use Flavacaster\Configs\AbstractConfig;
 
 class ApplicationConfiguration extends AbstractConfig
 {

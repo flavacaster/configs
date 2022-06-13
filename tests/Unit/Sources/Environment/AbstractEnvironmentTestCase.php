@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Sources\Environment;
 
-use N7\Configs\Sources\EnvironmentSource;
+use Flavacaster\Configs\Sources\EnvironmentSource;
 use PHPUnit\Framework\TestCase;
 
 abstract class AbstractEnvironmentTestCase extends TestCase

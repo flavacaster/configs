@@ -82,7 +82,13 @@ final class EnvironmentSource
         }
 
         if ($value === false) {
-            return $this->prepareDefaultValue($default);
+            $preparedDefaultValue = $this->prepareDefaultValue($default);
+
+            if ($preparedDefaultValue === null && !$nullable) {
+                throw new \RuntimeException(
+                    sprintf('ENV key "%s" is required and cannot be null', $key),
+                );
+            }
         }
 
         if ($nullable && $this->isNull($value)) {
